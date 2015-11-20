@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Vecta Corp.</title>
+    <!-- Normal style sheet used for layout and general formatting. -->
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <link href="jquery-ui.theme.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#dialog").hide();
+            $.ajax({
+                type: "get",
+                url: "json.js",
+                timeout: 10000,
+                dataType: "json",
+                beforeSend: function() {
+                    $("#result").html("Loading...");
+                },
+                error: function(xhr, status, error) {
+                    $("#dialog").dialog();
+                },
+                success: function() {
+                    $.getJSON("json.js", function(data) {
+                        $.each(data, function() {
+                            $.each(this, function(key, value) {
+                                $("#result").append("<h3>" + value.name + "</h3><h4>" + value.title + "</h4><p>" + value.bio + "<p>");
+                            });
+                        });
+                    });
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <section id="container">
+        <header></header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <section id="content">
+            <h2>The Vecta Corp. Management Team</h2>
+
+            <div id="result"></div>
+
+            <div id="dialog" title="Error">
+                <p>An error has occured.</p>
+            </div>
+
+        </section>
+
+        <footer></footer>
+    </section>
+</body>
+
+</html>
