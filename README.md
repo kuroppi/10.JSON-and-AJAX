@@ -1,6 +1,4 @@
-Using the jQuery .load() Shorthand method
 
-Using jQuery .load() to:
 
 - Open index.html.
 - Within the <script> tag, replace the existing comment with a document ready function.
