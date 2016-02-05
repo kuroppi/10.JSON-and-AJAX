@@ -3,7 +3,7 @@ Using the jQuery .load() Shorthand method
 Using jQuery .load() to:
 
 - Open index.html.
-- Within the <script> tag, replace the existing comment with a document ready function.
+- Within the script tag, replace the existing comment with a document ready function.
 - Write the necessary event handlers to handle the click event for each of the 3 links within the index.html page.
 - When each link is clicked, the corresponding section within the solutions.html page should be loaded into the div tag uniquely identified as solution.
 
