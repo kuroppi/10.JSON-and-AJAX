@@ -1,9 +1,44 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi bibendum, nisi rutrum bibendum pretium, orci ex commodo mauris, eu aliquet libero libero in tellus. Praesent dictum accumsan elementum. Etiam erat justo, lobortis sed tempor et, maximus quis lacus. Aliquam at tortor lacus. Vestibulum quam lectus, efficitur efficitur aliquet id, blandit non eros. Fusce quis enim ac leo fringilla venenatis sit amet ut nisi. Maecenas rhoncus vel felis vel luctus. Sed varius enim in pretium hendrerit. Nunc semper diam et pulvinar congue. Nam id semper risus. Mauris eu eleifend ante. Aliquam in sollicitudin lectus, a pharetra nunc. Ut ornare eleifend neque ut suscipit. Cras fringilla, purus vel egestas dignissim, nisi magna malesuada felis, eget ornare diam neque vel odio. Nulla ornare volutpat nibh ac porta. Proin consectetur ante eu tellus ultrices feugiat quis nec sapien.
+Using the jQuery .load() Shorthand method
 
-Aenean tincidunt enim nec diam interdum semper. Vivamus dictum quis turpis vitae hendrerit. Sed nec ullamcorper risus. Nam cursus vel dolor eget blandit. Duis mollis placerat tortor, quis ullamcorper metus euismod eget. Integer sed quam augue. Donec aliquam augue non purus dignissim, molestie ultrices velit eleifend. Morbi rutrum scelerisque enim vulputate porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porttitor eget lectus ut auctor. Aliquam rutrum neque sed purus faucibus consectetur. Donec non justo accumsan, iaculis ante et, ullamcorper libero. Quisque malesuada molestie quam vitae ultrices. In tortor dui, euismod ut elit a, imperdiet suscipit nisl. Vivamus condimentum arcu augue, ullamcorper ultricies mauris vestibulum id.
+Using jQuery .load() to:
 
-Vestibulum hendrerit auctor venenatis. In risus erat, sagittis ut maximus eget, mattis nec nulla. Nunc non ex tempus, pellentesque turpis quis, eleifend felis. Etiam nulla risus, sollicitudin eget augue eget, suscipit vestibulum ante. Nunc sed diam sit amet massa efficitur porta. Curabitur ut magna dui. Quisque accumsan lectus a dui consectetur vestibulum. Nullam quis tristique nisi. Ut id pharetra libero.
+- Open index.html.
+- Within the <script> tag, replace the existing comment with a document ready function.
+- Write the necessary event handlers to handle the click event for each of the 3 links within the index.html page.
+- When each link is clicked, the corresponding section within the solutions.html page should be loaded into the div tag uniquely identified as solution.
 
-Suspendisse sit amet ipsum ornare, hendrerit nulla fringilla, consequat quam. Suspendisse consectetur mollis porttitor. Morbi pulvinar, turpis vel vehicula porta, sem tortor varius ante, sit amet ultrices mauris ligula in dui. Quisque ut ultricies massa. Vivamus accumsan turpis eu lectus mollis, eu ornare diam maximus. Morbi mi libero, pulvinar sagittis nunc sed, pulvinar venenatis sem. Aliquam malesuada malesuada erat sit amet iaculis.
+Part 2 - Using the jQuery .get() Shorthand Method
 
-Quisque dictum imperdiet accumsan. Praesent feugiat justo id egestas malesuada. Nullam turpis erat, semper ut pellentesque non, ultrices non nibh. Quisque dapibus massa id ligula iaculis lobortis. Duis at urna lectus. Vestibulum consectetur nisi vitae rutrum facilisis. Mauris eget velit ut sem tempus porta.
+Using the jQuery .get() shorthand method to programmatically load XML data into a web page using a server-side script such as a PHP file as an intermediary. This example will connect directly to an XML file and retrieve its contents.
+
+- Open index.html.
+- Within the <script> tag, replace the existing comment with a document ready function.
+- Use the $.get() method to point to the team.xml file. Upon successful load, it will call a function to execute some code.
+- Within the function, use method chaining to iterate through each of the child nodes in the management node.
+- Within the .each() method, append the contents of the name, title, and bio nodes to the div element uniquely identified as team. Don’t forget to concatenate some simple HTML markup to help format the text on the web page.
+
+Part 3 - Using the jQuery .getJSON() Shorthand Method
+
+Using the jQuery .getJSON() shorthand method to programmatically load JSON data into a web page.
+
+- Created a JSON file with each object having 5 or more items. Each item has at least 2 sets of key/value pairs.
+- Open index.html.
+- Within the <script> tag, replace the existing comment with a document ready function.
+- Use the $.getJSON() method to point to the JSON file that you just created. 
+- Use a set of nested .each() methods to iterate through the object and then the key/value pairs too.  Display the values of each pair within the div element uniquely identified as result.
+
+Part 4 - Using the jQuery .ajax() Shorthand Method
+
+Using the jQuery .ajax() shorthand method to programmatically load XML or JSON data into a web page using the .ajax() shorthand method using the following options:
+
+- type
+- url
+- timeout
+- datatype
+- beforeSend: display a loading message on the page
+- error: display a jQuery UI dialog box with an error message inside
+- success: this is where you’ll process the data returned
+
+
+
+
