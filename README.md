@@ -12,7 +12,7 @@ Part 2 - Using the jQuery .get() Shorthand Method
 Using the jQuery .get() shorthand method to programmatically load XML data into a web page using a server-side script such as a PHP file as an intermediary. This example will connect directly to an XML file and retrieve its contents.
 
 - Open index.html.
-- Within the <script> tag, replace the existing comment with a document ready function.
+- Within the script tag, replace the existing comment with a document ready function.
 - Use the $.get() method to point to the team.xml file. Upon successful load, it will call a function to execute some code.
 - Within the function, use method chaining to iterate through each of the child nodes in the management node.
 - Within the .each() method, append the contents of the name, title, and bio nodes to the div element uniquely identified as team. Don’t forget to concatenate some simple HTML markup to help format the text on the web page.
