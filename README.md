@@ -23,7 +23,7 @@ Using the jQuery .getJSON() shorthand method to programmatically load JSON data 
 
 - Created a JSON file with each object having 5 or more items. Each item has at least 2 sets of key/value pairs.
 - Open index.html.
-- Within the <script> tag, replace the existing comment with a document ready function.
+- Within the script tag, replace the existing comment with a document ready function.
 - Use the $.getJSON() method to point to the JSON file that you just created. 
 - Use a set of nested .each() methods to iterate through the object and then the key/value pairs too.  Display the values of each pair within the div element uniquely identified as result.
 
